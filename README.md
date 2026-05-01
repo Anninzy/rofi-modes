@@ -1,15 +1,21 @@
 # Info
 
-![Screenshot of info theme](screenshots/info.png)\
-Currently displays battery status only\
-\
-Call rofi with the script `rofi.sh -show ...` instead\
-\
-Put the following into existing rofi theme
+![Screenshot of info theme](screenshots/info.png) Currently displays battery
+status only
 
+```bash
+# Instead of
+rofi -show "..."
+
+# Run
+/PATH/TO/rofi.sh -show "..."
 ```
+
+```css
+// Add to existing rofi theme
+
 inputbar {
-  children: [ ..., textbox-info ];
+  children: [ prompt, textbox-prompt-colon, entry, overlay, num-filtered-rows, textbox-num-sep, num-rows, case-indicator, textbox-info ];
 }
 
 textbox-info {
@@ -20,8 +26,7 @@ textbox-info {
 
 # Inhibit
 
-![Screenshot of inhibit mode](screenshots/inhibit.png)\
-Used as a rofi mode
+![Screenshot of inhibit mode](screenshots/inhibit.png)
 
 ```bash
 rofi -modes "inhibit:PATH_TO_inhibit.sh" -show "inhibit"
@@ -38,7 +43,7 @@ if needed
 
 # Favorite
 
-![Screenshot of favorite mode](screenshots/favorite.png)\
+![Screenshot of favorite mode](screenshots/favorite.png)
 
 ```bash
 rofi -combi-modes "favorite:PATH_TO_favorite.sh" -show "combi"
@@ -46,5 +51,4 @@ rofi -combi-modes "favorite:PATH_TO_favorite.sh" -show "combi"
 
 Intended to be used in `combi`\
 Ensure `favorite` is the 1st mode\
-\
-Modify the script to pin selected program
+Modify the script to pin programs you need
