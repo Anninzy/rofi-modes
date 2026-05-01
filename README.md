@@ -35,3 +35,16 @@ any action except for suspending\
 blocked from all actions\
 Replace `status_*` with something more understandable than two nerdfont symbols
 if needed
+
+# Favorite
+
+![Screenshot of favorite mode](screenshots/favorite.png)\
+
+```bash
+rofi -combi-modes "favorite:PATH_TO_favorite.sh" -show "combi"
+```
+
+Intended to be used in `combi`\
+Ensure `favorite` is the 1st mode\
+\
+Modify the script to pin selected program
