@@ -1,5 +1,26 @@
-![Screenshot](preview.png)
+# Info
 
+![Screenshot of info theme](screenshots/info.png)\
+Currently displays battery status only\
+\
+Call rofi with the script `rofi.sh -show ...` instead\
+\
+Put the following into existing rofi theme
+
+```
+inputbar {
+  children: [ ..., textbox-info ];
+}
+
+textbox-info {
+  expand: false;
+  content: ${INFO};
+}
+```
+
+# Inhibit
+
+![Screenshot of inhibit mode](screenshots/inhibit.png)\
 Used as a rofi mode
 
 ```bash
